@@ -1,0 +1,127 @@
+.products-page {
+    padding: 32px;
+    max-width: 1400px;
+    margin: 0 auto;
+    color: #1e293b;
+}
+
+.products-page h1 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+
+.products-table-wrapper {
+    background: #ffffff;
+    border-radius: 14px;
+    overflow-x: auto;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    border: 1px solid #e2e8f0;
+}
+
+.products-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.products-table th {
+    background: #f8fafc;
+    color: #64748b;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 16px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.products-table td {
+    padding: 15px 16px;
+    border-bottom: 1px solid #f1f5f9;
+    font-size: 14px;
+}
+
+.products-table tbody tr {
+    transition: background 0.2s ease;
+}
+
+.products-table tbody tr:hover {
+    background: #f8fafc;
+}
+
+.products-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.products-table button {
+    border: none;
+    border-radius: 8px;
+    padding: 9px 14px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.products-table button:hover {
+    transform: translateY(-1px);
+}
+
+.products-table button:first-child {
+    background: #2563eb;
+    color: white;
+}
+
+.products-table button:first-child:hover {
+    background: #1d4ed8;
+}
+
+.products-table button:last-child {
+    background: #f1f5f9;
+    color: #475569;
+}
+
+.products-table button:last-child:hover {
+    background: #e2e8f0;
+}
+
+.products-table input,
+.products-table select {
+    width: 100%;
+    min-width: 120px;
+    padding: 9px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #1e293b;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    box-sizing: border-box;
+}
+
+.products-table input:focus,
+.products-table select:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.12);
+}
+
+.products-table input:hover,
+.products-table select:hover {
+    border-color: #94a3b8;
+}
+
+.product-id {
+    display: inline-block;
+    padding: 5px 9px;
+    border-radius: 6px;
+    background: #f1f5f9;
+    color: #64748b;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.products-table td:nth-child(4) {
+    color: #475569;
+    font-weight: 600;
+}

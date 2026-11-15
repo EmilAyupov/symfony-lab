@@ -1,0 +1,246 @@
+:root {
+    color-scheme: light;
+}
+
+#root {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 24px;
+    font-family: Inter, Arial, sans-serif;
+    color: #1f2937;
+}
+
+body {
+    margin: 0;
+    background: #f8fafc;
+}
+
+h1 {
+    margin-bottom: 32px;
+    color: #111827;
+    font-size: 32px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #1f2937;
+    font-size: 22px;
+}
+
+nav {
+    display: flex;
+    gap: 24px;
+    padding: 18px 24px;
+    margin-bottom: 32px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+}
+
+nav a {
+    color: #4b5563;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+nav a:hover {
+    color: #2563eb;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 20px;
+    margin-bottom: 12px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+li:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 14px rgba(0, 0, 0, 0.07);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    max-width: 450px;
+    padding: 24px;
+    margin: 28px 0;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.04);
+}
+
+form h2 {
+    margin-top: 0;
+}
+
+input,
+select {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    background: #ffffff;
+    font-size: 15px;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus,
+select:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+form button {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #2563eb;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+form button:hover {
+    background: #1d4ed8;
+}
+
+form button:disabled {
+    background: #93c5fd;
+    cursor: not-allowed;
+}
+
+form p {
+    margin: 0;
+    color: #dc2626;
+    font-size: 13px;
+}
+
+select option {
+    color: #1f2937;
+    background-color: #ffffff;
+}
+.category-filter {
+    display: block;
+    max-width: 280px;
+    margin: 20px 0;
+    padding: 12px 16px;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    background-color: #ffffff;
+    color: #1f2937;
+    font-size: 15px;
+    cursor: pointer;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.category-filter:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+    outline: none;
+}
+
+label[for="category-filter"] {
+    display: block;
+    text-align: left;
+    margin-bottom: 8px;
+    color: #374151;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.product-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+}
+
+.product-name {
+    flex: 1;
+    color: #1f2937;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.product-price {
+    color: #2563eb;
+    font-size: 16px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.product-category {
+    padding: 6px 12px;
+    border-radius: 20px;
+    background: #eff6ff;
+    color: #1d4ed8;
+    font-size: 13px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+    #root {
+        padding: 20px 14px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        gap: 14px;
+        padding: 16px;
+    }
+
+    .product-item {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .product-name {
+        flex-basis: 100%;
+    }
+}
+
+.products-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 400px;
+    gap: 32px;
+    align-items: start;
+}
+
+.products-content {
+    min-width: 0;
+}
+
+.products-sidebar form {
+    margin-top: 0;
+    max-width: none;
+}
+
+@media (max-width: 800px) {
+    .products-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .products-sidebar {
+        width: 100%;
+    }
+}
